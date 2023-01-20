@@ -79,6 +79,7 @@ const getList = () => {
   listn.value = pinyin(list.toString(), { type: "array" })
     .toString()
     .split(",,,");
+  taList.value = [];
   listv.value.forEach(async (element, index) => {
     taList.value!.push({
       pn: listn.value![index],
