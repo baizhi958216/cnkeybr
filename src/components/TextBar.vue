@@ -29,9 +29,7 @@
 <script setup lang="ts">
 import { ref, toRaw } from "vue";
 import { pinyin } from "pinyin-pro";
-
 const keyList = "qwertyuiopasdfghjklzxcvbnm ".split("");
-
 const tex =
   "一般来说想到这里我的心在流血我的穿山甲到底说了什么在一定程度上会影响了周围\
 穿山甲到底说了什么因何而发生就我个人来说穿山甲到底说了什么对我的意义不能不说非常重大\
@@ -64,15 +62,10 @@ const tex =
 不能抱怨生活相反我们要以感恩的心态来对待这并不算漫长的人生这条路很长有时候走着走着不经意发现自己迷了路\
 每个人都是独立的个体有属于自我发展的空间和方向我的穿山甲到底说了什么在一定程度上会影响了周围希腊曾经提到过\
 最困难的事情就是认识自己这不禁令我深思文森特皮尔说过一句富有哲理的话改变你的想法你就改变了自己的世界";
-
 const listv = ref<string[]>();
-
 const listn = ref<string[]>();
-
 const ivalue = ref<string[]>();
-
 const taList = ref<{ pn: string; val: string }[]>([]);
-
 const splittex = () => {
   const texarr = tex.split("");
   return texarr[Math.floor(Math.random() * texarr.length)];
@@ -86,7 +79,6 @@ const getList = () => {
   listn.value = pinyin(list.toString(), { type: "array" })
     .toString()
     .split(",,,");
-
   listv.value.forEach(async (element, index) => {
     taList.value!.push({
       pn: listn.value![index],
@@ -95,7 +87,6 @@ const getList = () => {
   });
 };
 getList();
-
 document.addEventListener("keyup", (e: KeyboardEvent) => {
   if (ivalue.value?.length === listv.value?.length) {
     const inv = toRaw(ivalue.value)?.toString();

@@ -27,7 +27,6 @@
 const key1 = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"];
 const key2 = ["A", "S", "D", "F", "G", "H", "J", "K", "L"];
 const key3 = ["Z", "X", "C", "V", "B", "N", "M"];
-
 const clickdown = (val: any) => {
   val.target.classList += " keyenter";
 };
