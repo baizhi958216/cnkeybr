@@ -1,5 +1,5 @@
 <template>
-  <div class="content">
+  <div class="content" @click="inputFocus">
     <text-bar />
     <!-- 键盘 -->
     <!-- <key-board /> -->
@@ -9,6 +9,10 @@
 <script setup lang="ts">
 import TextBar from "./components/TextBar.vue";
 // import KeyBoard from "./components/KeyBoard.vue";
+const inputFocus = () => {
+  const input = document.querySelector("input")!;
+  input.focus();
+};
 </script>
 
 <style scoped>
