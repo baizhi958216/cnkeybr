@@ -50,9 +50,6 @@
         "timestampUrl": "",
         "wix": {
           "language": "zh-CN"
-        },
-        "webviewInstallMode": {
-          "type": "offlineInstaller"
         }
       }
     },
@@ -68,7 +65,7 @@
         "height": 650,
         "resizable": true,
         "title": "中文打字练习",
-        "center":true,
+        "center": true,
         "width": 1200
       }
     ]
